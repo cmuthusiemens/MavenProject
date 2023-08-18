@@ -61,7 +61,7 @@ public class CommonMethodsAndAssertions extends Driver {
 	}
 
 	protected String takeScreenshot(String string) throws IOException {
-		String directoryName = System.getProperty("user.dir") + "//target//Screenshots"+"_"+string+"//";
+		String directoryName = System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//";
 		File directory = new File(directoryName);
 	    if (! directory.exists()){
 	        directory.mkdir();
@@ -69,8 +69,8 @@ public class CommonMethodsAndAssertions extends Driver {
 	    
 	   	    
 	    File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destFile = new File(System.getProperty("user.dir") + "//target//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png");
-		String dest = System.getProperty("user.dir") + "//target//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png";
+		File destFile = new File(System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png");
+		String dest = System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png";
 		FileHandler.copy(srcFile, destFile);
 		return dest;
 
