@@ -70,7 +70,8 @@ public class CommonMethodsAndAssertions extends Driver {
 	   	    
 	    File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destFile = new File(System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png");
-		String dest = System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png";
+		//String dest = System.getProperty("user.dir") + "//target//Reports//Screenshots"+"_"+string+"//"+ GetTimeStampValue()+ ".png";
+		String dest = "Screenshots"+"_"+string+"/"+ GetTimeStampValue()+ ".png";
 		FileHandler.copy(srcFile, destFile);
 		return dest;
 
