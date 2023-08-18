@@ -8,7 +8,7 @@ public class extreports {
 	
 	public static ExtentReports getreportobject()
 	{
-		String path = System.getProperty("user.dir")+"\\Reports\\index.html";
+		String path = System.getProperty("user.dir")+"\\target\\Reports\\index.html";
 	ExtentSparkReporter	reporter = new ExtentSparkReporter(path);
 	reporter.config().setReportName("reportTitle");
 	reporter.config().setDocumentTitle("Tabtitle");
